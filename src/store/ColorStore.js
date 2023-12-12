@@ -73,8 +73,9 @@ const useColorStore = create((set) => ({
     // Check for matching colors and return the count
     const matchingColors = [];
     const userColors = newColorArray.map((userColor) => userColor.color);
+    const randomColors = RandomColorsArray.map((ranCol) => ranCol.color);
     userColors.forEach((userColor, index) => {
-      const randomColor = RandomColorsArray[index];
+      const randomColor = randomColors[index];
       if (randomColor === userColor) {
         matchingColors.push({ color: userColor, index });
       }
@@ -102,6 +103,7 @@ const useColorStore = create((set) => ({
           { id: 5, color: "" },
           { id: 6, color: "" },
         ],
+        matching: 0,
       };
       useColorStore.setState((state) => ({
         UserGeneratedColors: [...state.UserGeneratedColors, newColorEntry],

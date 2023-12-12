@@ -76,19 +76,23 @@ export default function ClientDNDContainer({ newobj }) {
     //setActiveColor(active.data.current);
   };
 
-  const handleDragEnd = (event) => {
-    const { active, over } = event;
+  const handleDragEnd = ({ active, over }) => {
     if (active && over) {
-      const ActiveContainer = active.data.current.container;
-      const ActiverColor = active.data.current.color;
-      const ActiverId = active.data.current.index;
-      const OverContainer = over.data.current.container;
-      const OverColor = over.data.current.color;
-      const OverId = over.data.current.index;
-      if (ActiveContainer === "0") {
-        updateColorById(OverId, ActiverColor);
+      const {
+        container: activeContainer,
+        color: activeColor,
+        index: activeId,
+      } = active.data.current;
+      const {
+        container: overContainer,
+        color: overColor,
+        index: overId,
+      } = over.data.current;
+
+      if (activeContainer === "0") {
+        updateColorById(overId, activeColor);
       } else {
-        swapColorsById(ActiverId, OverId);
+        swapColorsById(activeId, overId);
       }
     }
   };
