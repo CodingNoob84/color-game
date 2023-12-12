@@ -3,6 +3,7 @@ import {
   DndContext,
   KeyboardSensor,
   PointerSensor,
+  TouchSensor,
   closestCorners,
   useSensor,
   useSensors,
@@ -23,6 +24,7 @@ export default function ClientDNDContainer({ newobj }) {
   const [overColor, setOverColor] = useState(null);
   const [activeContainerId, setActiveContainerId] = useState("");
   const sensors = useSensors(
+    useSensor(TouchSensor),
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
