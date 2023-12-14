@@ -117,7 +117,10 @@ export default function ClientDNDContainer({ newobj }) {
         />
       </div>
       <div className="mt-24 w-full h-2"></div>
-      <div className="fixed z-50 w-full h-20 max-w-md -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
+      <div className="fixed z-50 w-full h-20 max-w-md -translate-x-1/2  rounded-full bottom-4 left-1/2 bg-gray-700 border-gray-600">
+        <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 border bg-slate-600 text-sm rounded-full w-48 text-center">
+          Colors Container
+        </div>
         <InitialDragContainer />
       </div>
     </DndContext>

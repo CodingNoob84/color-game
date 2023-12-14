@@ -15,8 +15,8 @@ function PrevContianer({ prevarray }) {
       {prevarray.map((prev, i) => (
         <div key={prev.id} className="my-5">
           <div className="flex justify-center items-center">
-            <div className="relative m-5 w-full h-24 max-w-md bg-white border border-gray-200 rounded-full dark:bg-gray-700 dark:border-gray-600">
-              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 border bg-slate-400 text-sm rounded-full w-24 text-center">
+            <div className="relative m-5 w-full h-24 max-w-md  rounded-full bg-gray-700 border-gray-600">
+              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 border bg-slate-600 text-sm rounded-full w-24 text-center">
                 {`${getOrdinalString(prev.id)} try`}
               </div>
               <div className="grid h-full grid-cols-6 mx-auto max-w-md">

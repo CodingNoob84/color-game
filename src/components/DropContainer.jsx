@@ -25,11 +25,11 @@ function DropContainer({ id, colorsArray }) {
     <div>
       <div className="flex justify-center items-center">
         <div
-          className={`relative m-5 w-full h-24 max-w-md bg-white border border-gray-200 rounded-full dark:bg-gray-700 dark:border-gray-600  ${
+          className={`relative m-5 w-full h-24 max-w-md  rounded-full bg-gray-700 border-gray-600  ${
             getOrdinalString(id) === "answer" && "shadow-md shadow-green-400"
           }`}
         >
-          <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 border bg-slate-400 text-sm rounded-full w-20 text-center">
+          <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 border bg-slate-600 text-sm rounded-full w-20 text-center">
             {getOrdinalString(id) === "answer"
               ? "Answer"
               : `${getOrdinalString(id)} try`}
@@ -59,7 +59,12 @@ function DropContainer({ id, colorsArray }) {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <div onClick={() => handleCheck()}>Check</div>
+        <div
+          onClick={() => handleCheck()}
+          className="border rounded-md p-2 cursor-pointer hover:bg-green-700"
+        >
+          Check
+        </div>
         {/* <div>Matching Colors:3</div> */}
       </div>
     </div>
