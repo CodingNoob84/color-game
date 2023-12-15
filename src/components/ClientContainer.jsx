@@ -19,7 +19,7 @@ function ClientContainer() {
   console.log(remainingArray);
   console.log("lastobject", lastObject);
   return (
-    <div className="mt-28">
+    <div className="mt-16 bg-black">
       {RandomColorsArray.length === 0 ? (
         <InitialSetup />
       ) : (
